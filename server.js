@@ -1,8 +1,12 @@
 var http = require('http');
+var url = rqeure('url');
 
-function start() {
+function start(route) {
   function onRequest(request, response) {
     console.log('request received');
+
+    route(pathname); // injected funtioncall
+    
     response.writeHead(200, {'Content-Type': 'text/plain'});
     response.write('Hello World');
     response.end();
