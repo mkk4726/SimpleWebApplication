@@ -6,7 +6,7 @@ function start(route, handle) {
     var pathname = url.parse(request.url).pathname;
     console.log('request received');
 
-    route(handle, pathname); // injected funtioncall
+    route(handle, pathname, response); // injected funtioncall
 
     response.writeHead(200, {'Content-Type': 'text/plain'});
     response.write('Hello World');

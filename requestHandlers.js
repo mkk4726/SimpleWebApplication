@@ -1,11 +1,17 @@
 // 요청 처리자 , Request Handler.
 
-function view() {
+function view(response) {
   console.log('request handler called --> view');
+  console.writeHead(200, {'Content-Type' : 'text/plain'});
+  response.write('Hello View');
+  response.end();
 }
 
-function create() {
+function create(response) {
   console.log('request handler called --> create');
+  response.writeHead(200, {'Content-Type': 'text/plain'});
+  response.write('Hello Create');
+  response.end();
 }
 
 var handle = {}; // javascript object has key:value pair.
