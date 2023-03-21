@@ -2,7 +2,7 @@
 
 function view(response) {
   console.log('request handler called --> view');
-  console.writeHead(200, {'Content-Type' : 'text/plain'});
+  response.writeHead(200, {'Content-Type' : 'text/plain'});
   response.write('Hello View');
   response.end();
 }
